@@ -246,7 +246,7 @@ export class Bootstrap4FrameworkComponent implements OnInit, OnChanges {
         // 'Add' buttons - references
         case '$ref':
           this.widgetOptions.fieldHtmlClass = addClasses(
-            this.widgetOptions.fieldHtmlClass, 'btn pull-right');
+            this.widgetOptions.fieldHtmlClass, 'btn-dark pull-right');
           this.widgetOptions.fieldHtmlClass = addClasses(
             this.widgetOptions.fieldHtmlClass, this.options.style || 'btn-default');
           this.options.icon = 'glyphicon glyphicon-plus';

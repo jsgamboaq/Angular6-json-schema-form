@@ -1,8 +1,7 @@
 import { AbstractControl } from '@angular/forms';
 import {Component, Inject, Input, OnInit, Optional} from '@angular/core';
 import { JsonSchemaFormService } from '../../json-schema-form.service';
-import { MAT_LABEL_GLOBAL_OPTIONS } from '@angular/material/core';
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MAT_LABEL_GLOBAL_OPTIONS } from '@angular/material';
 
 @Component({
   // tslint:disable-next-line:component-selector

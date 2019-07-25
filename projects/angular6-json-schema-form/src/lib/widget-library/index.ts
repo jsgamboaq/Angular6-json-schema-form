@@ -54,3 +54,4 @@ export { TabsComponent } from './tabs.component';
 export { TemplateComponent } from './template.component';
 export { TextareaComponent } from './textarea.component';
 export { WidgetLibraryService } from './widget-library.service';
+//  export { WidgetLibraryModule } from './widget-library.module';

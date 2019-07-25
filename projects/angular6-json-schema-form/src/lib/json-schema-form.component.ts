@@ -9,6 +9,7 @@ import {
   forwardRef,
   Input,
   OnChanges,
+  SimpleChanges,
   OnInit,
   Output
   } from '@angular/core';
@@ -109,11 +110,22 @@ export class JsonSchemaFormComponent implements ControlValueAccessor, OnChanges,
     formData: null, loadExternalAssets: null, debug: null,
   };
 
+  private _options: any;
+
   // Recommended inputs
   @Input() schema: any; // The JSON Schema
   @Input() layout: any[]; // The form layout
   @Input() data: any; // The form data
-  @Input() options: any; // The global form options
+  // The global form options
+  @Input()
+  set options(val: any) {
+    this._options = val;
+    this.initializeForm();
+    //this.initializeOptions();
+  }
+  get options() {
+    return this._options;
+  }
   @Input() framework: any|string; // The framework to load
   @Input() widgets: any; // Any custom widgets to load
 
@@ -193,6 +205,18 @@ export class JsonSchemaFormComponent implements ControlValueAccessor, OnChanges,
   ngOnChanges() {
     this.updateForm();
   }
+
+  /*ngOnChanges(changes: SimpleChanges) {
+    if ( changes) {
+      if ( changes.change) {
+        if ( !changes.change.firstChange) {
+          console.log('JSONSchemaFormComponent.ngOnChanges prev = ' + changes.change.previousValue );
+        }
+        console.log('JSONSchemaFormComponent.ngOnChanges current = ' + changes.change.currentValue );
+        this.updateForm();
+      }
+    }
+  }*/
 
   writeValue(value: any) {
     this.setFormValues(value, false);
