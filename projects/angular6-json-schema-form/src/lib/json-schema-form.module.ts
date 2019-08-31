@@ -4,7 +4,7 @@ import { JsonSchemaFormComponent } from './json-schema-form.component';
 import { NgModule } from '@angular/core';
 import { NoFrameworkModule } from './framework-library/no-framework/no-framework.module';
 import { WidgetLibraryModule } from './widget-library/widget-library.module';
-
+import './shared/arrayPrototypes';
 
 
 
